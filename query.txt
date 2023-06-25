@@ -1,0 +1,38 @@
+FORMAT TABEL
+- tproduct (berisi detail laptop)       : Kode_Produk Nama_Produk    Jenis_Produk     Harga
+                                            (P001)     (ASUS ROG)       (AX01)     (12.000.000)
+- tbrand (berisi detail brand laptop)   : Kode_Brand     Nama_Brand     Asal_Brand  Pendiri_Brand 
+                                            (B001)         (ASUS)      (ITALIAN)      (AMIDA)
+
+KETENTUAN QUERY
+- ENTRI nama_tabel primary_key input1 input2 input3;
+- ENTRI UBAH nama_tabel primary_key input1 input2 input3;
+    (-) jika ada datanya maka akan mengeksekusi query UBAH
+    (-) jika tidak ada datanya maka akan mengeksekusi query ENTRI
+- ENTRI HAPUS nama_tabel primary_key input1 input2 input3;
+    (-) jika ada datanya maka akan mengeksekusi query HAPUS
+    (-) jika tidak ada datanya maka akan mengeksekusi query ENTRI
+- UBAH nama_tabel primary_key input1 input2 input3;
+- HAPUS nama_tabel primary_key;
+- TAMPIL nama_tabel1 (nama_tabel2);
+
+CORRECT TEST CASE
+- ENTRI tproduct P005 Asus Zenbook 12.500.000;
+- ENTRI UBAH tproduct P006 Dell Inspiron 7.500.000;
+- ENTRI HAPUS tproduct P006 Dell Inspiron 7.500.000;
+- ENTRI UBAH tbrand B006 MICROSOFT New_Meksiko Bill_Gates;
+- TAMPIL tproduct;
+- TAMPIL tbrand;
+
+WRONG TEST CASE 
+- ENTRI tproduk P007 Asus Chromebook 10.000.000;
+- HAPUS tproduct P009;
+- MASUK tbrand B004 ACER Taiwan Stan_Shih; 
+- UBAH tbrend B004 TOSHIBA Jepang Shibaura_Seisakusho;
+- ENTRI tproduct P001 Lenovo Yoga 18.000.000;
+- ENTRI tbrand B003 ACER Taiwan Stan_Shih;
+- TAMPIL tproduk;
+
+KELUAR DARI PROGRAM
+- jangan lupa bahagia hari ini;
+- exit;
